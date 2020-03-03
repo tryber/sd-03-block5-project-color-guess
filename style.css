@@ -14,4 +14,5 @@ div{
     position: relative;
     border: 1px black solid;
     border-radius: 50%;
+    cursor: pointer;
 }
