@@ -18,9 +18,9 @@ let client_answer = document.getElementById('answer');
 const array_balls = document.querySelectorAll('.ball');
 
 startGame();
-
-let placar = document.getElementById('placar');
-placar.innerText = 0;
+let placar = 0;
+let spanplacar = document.getElementById('placar');
+spanplacar.innerText = 0;
 
 [].forEach.call(array_balls, ball =>{
     ball.addEventListener('click', function(){
@@ -32,6 +32,7 @@ placar.innerText = 0;
             client_answer.innerText = "Errou! Tente novamente!";
             placar = placar - 1;
         }
+        spanplacar.innerText = placar;
     });
 });
 
