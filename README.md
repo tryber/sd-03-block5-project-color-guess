@@ -82,42 +82,6 @@ Ao clicar no botão reiniciar, o placar **NÃO** deve ser resetado para zero.
 
 O elemento que conterá o placar deve ter o **id** `score`.
 
-### 8 - Crie uma regra que decremente 1 ponto para cada erro
-
-O placar **não** pode ficar menor que 0. O botão deve ter o **id** `reset-game`.
-
-### 9 - Crie uma regra de incremento e decremento progressivos
-
-Ao acertar três respostas consecutivas, você ganha 1 ponto extra a cada resposta certa. Exemplo:
-
-* `Acerto 1:` +3 pontos.
-
-* `Acerto 2:` +3 pontos.
-
-* `Acerto 3:` +4 pontos.
-
-* `Acerto 4:` +5 pontos.
-
-* `Erro 1:` -1 ponto.
-
-* `Acerto 5:` +3 pontos.
-
-Ao errar três respostas consecutivas, você perde 1 ponto extra a cada resposta errada. Exemplo:
-
-* `Erro 1:` -1 pontos.
-
-* `Erro 2:` -1 pontos.
-
-* `Erro 3:` -2 pontos.
-
-* `Erro 4:` -3 pontos.
-
-* `Acerto 1:` +3 pontos.
-
-* `Erro 5:` -1 pontos.
-
-Exemplo: Joana tem 3 acertos consecutivos seguidos de 4 erros e por fim mais 2 acertos. A pontuação de Joana é de 9 pontos (3 + 3 + 4 - 1 - 1 - 2 - 3 + 3 + 3).
-
 ---
 
 ## Instruções para entregar seu projeto:
