@@ -19,13 +19,18 @@ const array_balls = document.querySelectorAll('.ball');
 
 startGame();
 
+let placar = document.getElementById('placar');
+placar.innerText = 0;
+
 [].forEach.call(array_balls, ball =>{
     ball.addEventListener('click', function(){
         console.log(ball.style.backgroundColor);
         if(ball.style.backgroundColor == "rgb"+rgb_color.textContent){
             client_answer.innerText = "Acertou!";
+            placar = placar + 3;
         }else{
             client_answer.innerText = "Errou! Tente novamente!";
+            placar = placar - 1;
         }
     });
 });
