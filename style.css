@@ -7,13 +7,13 @@ p {
 }
 
 div {
-    border-radius: 100%;
-    display: inline-block;
-    height: 50px;
-    margin: 0 10px;
-    width: 50px;
+  border-radius: 100%;
+  display: inline-block;
+  height: 50px;
+  margin: 0 10px;
+  width: 50px;
 }
 
 .divs {
-    text-align: center;
+  text-align: center;
 }
