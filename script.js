@@ -8,17 +8,17 @@ const answer = randomNumber(6);
 let firstScore = 0;
 
 document.querySelectorAll('.ball').forEach(e => {
-  let randomClr = randomColor();
+  const randomClr = randomColor();
   e.style.backgroundColor = `rgb${randomClr}`;
   if (e === document.querySelectorAll('.ball')[answer]) {
     document.getElementById('rgb-color').textContent = randomClr;
   }
   e.addEventListener('click', function (event) {
-    if (event.target.style.backgroundColor == document.querySelectorAll('.ball')[answer].style.backgroundColor) {
+    if (event.target.style.backgroundColor === document.querySelectorAll('.ball')[answer].style.backgroundColor) {
       document.getElementById('answer').textContent = 'Acertou!';
       if (localStorage.getItem('Score')) {
-        if(firstScore === 0){
-          let score = parseInt(localStorage.getItem('Score'))
+        if (firstScore === 0) {
+          let score = parseInt(localStorage.getItem('Score'), 10);
           score += 3;
           localStorage.setItem('Score', score);
           firstScore = 1;
