@@ -8,8 +8,8 @@ let answer = randomNumber(5)
 let answerElement = document.querySelectorAll(".ball")[answer]
 
 document.querySelectorAll(".ball").forEach(e => {
-  let randomClr = `rgb${randomColor()}`
-  e.style.backgroundColor = randomClr
+  let randomClr = randomColor()
+  e.style.backgroundColor = `rgb${randomClr}`
   if(e == answerElement){
     document.getElementById("rgb-color").textContent = randomClr
   }
