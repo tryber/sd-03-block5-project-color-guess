@@ -30,7 +30,7 @@ document.querySelectorAll(".ball").forEach(e => {
   })
 });
 
-document.getElementById("restart").addEventListener("click", function (){window.location.reload()})
+document.getElementById("reset-game").addEventListener("click", function (){window.location.reload()})
 
 if(localStorage.getItem("Score")){
   document.getElementById("score").textContent = localStorage.getItem("Score")
