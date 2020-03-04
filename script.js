@@ -7,7 +7,7 @@ const randomColor = () => `(${randomNumber(255)} ,${randomNumber(255)} ,${random
 const answer = randomNumber(6);
 let firstScore = 0;
 
-document.querySelectorAll('.ball').forEach( (e) => {
+document.querySelectorAll('.ball').forEach((e) => {
   const randomClr = randomColor();
   e.style.backgroundColor = `rgb${randomClr}`;
   if (e === document.querySelectorAll('.ball')[answer]) {
