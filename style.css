@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+  /* font-family: Ubuntu, Roboto, Arial, Helvetica, sans-serif; */
+  margin: 0 auto;
+  width: 80%;
+}
+
+.content {
+  background-color: rgb(239, 200, 139);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ball-div {
+  display: flex;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 100%;
+}
