@@ -21,3 +21,17 @@ window.onload = function() {
   answer.innerHTML = 'Escolha uma cor';
   rgbColor.innerHTML = arrayCores[cor];
 };
+
+function adivinhaCor (i) {
+    balls[i].addEventListener('click', function () {
+        if(balls[i].style.backgroundColor == rgbColor.innerHTML) {
+            answer.innerHTML = 'Acertou!';
+        } else {
+            answer.innerHTML = 'Errou! Tente novamente!';
+        }
+    });
+}
+
+for (let i = 0; i < arrayCores.length; i+= 1) {
+    adivinhaCor(i);
+}
