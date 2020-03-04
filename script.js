@@ -6,6 +6,7 @@ const randomColor = () => `(${randomNumber(255)} ,${randomNumber(255)} ,${random
 
 let answer = randomNumber(6)
 
+
 document.querySelectorAll(".ball").forEach(e => {
   let randomClr = randomColor()
   e.style.backgroundColor = `rgb${randomClr}`
@@ -15,6 +16,14 @@ document.querySelectorAll(".ball").forEach(e => {
   e.addEventListener("click", function(event){
     if(event.target.style.backgroundColor == document.querySelectorAll(".ball")[answer].style.backgroundColor){
       document.getElementById("answer").textContent = 'Acertou!'
+      if(localStorage.getItem("Score")){
+        let score = parseInt(localStorage.getItem("Score"))
+        score +=  3
+        localStorage.setItem("Score", score)
+      } else {
+        localStorage.setItem("Score", 3)
+      }
+      document.getElementById("score").textContent = localStorage.getItem("Score")
     } else {
       document.getElementById("answer").textContent = 'Errou! Tente novamente!'
     }
@@ -22,3 +31,7 @@ document.querySelectorAll(".ball").forEach(e => {
 });
 
 document.getElementById("restart").addEventListener("click", function (){window.location.reload()})
+
+if(localStorage.getItem("Score")){
+  document.getElementById("score").textContent = localStorage.getItem("Score")
+}
