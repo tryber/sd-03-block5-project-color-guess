@@ -7,7 +7,7 @@ const randomColor = () => `(${randomNumber(255)} ,${randomNumber(255)} ,${random
 const answer = randomNumber(6);
 let firstScore = 0;
 
-document.querySelectorAll('.ball').forEach(e => {
+document.querySelectorAll('.ball').forEach( (e) => {
   const randomClr = randomColor();
   e.style.backgroundColor = `rgb${randomClr}`;
   if (e === document.querySelectorAll('.ball')[answer]) {
@@ -33,7 +33,7 @@ document.querySelectorAll('.ball').forEach(e => {
   });
 });
 
-document.getElementById('reset-game').addEventListener('click', function () { window.location.reload() });
+document.getElementById('reset-game').addEventListener('click', function () { window.location.reload(); });
 
 if (localStorage.getItem('Score')) {
   document.getElementById('score').textContent = localStorage.getItem('Score');
