@@ -41,7 +41,7 @@ function giveAnswer(){
 }
 
 
-let restart = document.getElementById("restart")
+let restart = document.getElementById("reset-game")
 restart.addEventListener("click", reload)
 
 function reload(){
