@@ -32,7 +32,7 @@ for (let i = 0; i < 6; i++){
 
 function giveAnswer(){
 
-   if(balls[i].innerHTML = randomRGB){
+   if(balls[i].innerHTML == randomRGB){
     document.getElementById("answer").innerHTML = "Acertou"
    }else{
     document.getElementById("answer").innerHTML = "Errou" 
