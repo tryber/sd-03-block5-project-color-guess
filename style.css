@@ -26,3 +26,10 @@ header {
 .ball-section{
     margin-top: 20px;
 }
+
+.placar {
+    width: 160px;
+    height: 80px;
+    border: black 1px solid;
+    display: block
+}

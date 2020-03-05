@@ -34,17 +34,19 @@ for (let i = 0; i < 6; i++){
 
 
 function giveAnswer(){
+    
 
    if(balls[i].innerHTML == randomRGB){
     document.getElementById("answer").innerHTML = "Acertou!"
     cont = cont + 3
     localStorage.setItem("contador", cont)
-
+    document.getElementById("placar").innerHTML = cont
     
    }else{
     document.getElementById("answer").innerHTML = "Errou! Tente novamente!" 
     cont = cont - 1
     localStorage.setItem("contador", cont)
+    document.getElementById("placar").innerHTML = cont
    }
 }
 }
@@ -57,3 +59,4 @@ function reload(){
     location.reload()
 }
 
+document.getElementById("placar").innerHTML = cont
