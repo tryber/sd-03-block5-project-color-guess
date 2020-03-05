@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the RGB v0.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="newGame()">
+    <header>
+        <h1 id="title" class="titulo">Adivinhe a côr!!</h1>
+        <button onclick="newGame()">New Game</button>
+        <div id="score" class="placar">Pontos: </div>
+    </header>
+    <article>
+        <div class="div-bolas">
+            <div class="ball" onclick="comparaResposta()"></div>
+            <div class="ball" onclick="comparaResposta()"></div>
+            <div class="ball" onclick="comparaResposta()"></div>
+            <div class="ball" onclick="comparaResposta()"></div>
+            <div class="ball" onclick="comparaResposta()"></div>
+            <div class="ball" onclick="comparaResposta()"></div>
+        </div>
+        <div class="textos"><h2 id="textoCor">Clique em New Game para iniciar um novo jogo</h2></div>
+        <div class="textos"><h3 id="answer">Escolha uma cor</h3></div>
+    </article>
+    <script src="script.js"></script>
+</body>
+</html>
