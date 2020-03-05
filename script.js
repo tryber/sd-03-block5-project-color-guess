@@ -52,11 +52,21 @@ function giveAnswer(){
 }
 
 
-let restart = document.getElementById("reset-game")
-restart.addEventListener("click", reload)
+let reset = document.getElementById("reset-game")
+reset.addEventListener("click", reload)
 
 function reload(){
     location.reload()
 }
 
+let restartAll = document.getElementById("reset-all")
+restartAll.addEventListener("click", restart)
+
+function restart(){
+    localStorage.clear()
+    location.reload()
+}
+
 document.getElementById("placar").innerHTML = cont
+
+
