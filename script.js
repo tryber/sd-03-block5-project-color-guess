@@ -39,3 +39,11 @@ function giveAnswer(){
    }
 }
 }
+
+
+let restart = document.getElementById("restart")
+restart.addEventListener("click", reload)
+
+function reload(){
+    location.reload()
+}
