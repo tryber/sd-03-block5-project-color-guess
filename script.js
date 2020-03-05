@@ -36,13 +36,13 @@ for (let i = 0; i < 6; i++){
 function giveAnswer(){
 
    if(balls[i].innerHTML == randomRGB){
-    document.getElementById("answer").innerHTML = "Acertou"
-    cont = cont + 1
+    document.getElementById("answer").innerHTML = "Acertou!"
+    cont = cont + 3
     localStorage.setItem("contador", cont)
 
     
    }else{
-    document.getElementById("answer").innerHTML = "Errou" 
+    document.getElementById("answer").innerHTML = "Errou! Tente novamente!" 
    }
 }
 }
