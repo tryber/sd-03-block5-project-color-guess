@@ -43,6 +43,8 @@ function giveAnswer(){
     
    }else{
     document.getElementById("answer").innerHTML = "Errou! Tente novamente!" 
+    cont = cont - 1
+    localStorage.setItem("contador", cont)
    }
 }
 }
