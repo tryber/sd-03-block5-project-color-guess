@@ -40,13 +40,13 @@ function giveAnswer(){
     document.getElementById("answer").innerHTML = "Acertou!"
     cont = cont + 3
     localStorage.setItem("contador", cont)
-    document.getElementById("placar").innerHTML = cont
+    document.getElementById("score").innerHTML = cont
     
    }else{
     document.getElementById("answer").innerHTML = "Errou! Tente novamente!" 
     cont = cont - 1
     localStorage.setItem("contador", cont)
-    document.getElementById("placar").innerHTML = cont
+    document.getElementById("score").innerHTML = cont
    }
 }
 }
@@ -67,6 +67,6 @@ function restart(){
     location.reload()
 }
 
-document.getElementById("placar").innerHTML = cont
+document.getElementById("score").innerHTML = cont
 
 
