@@ -30,15 +30,18 @@ document.getElementById("answer").innerHTML = "Escolha uma cor"
 let balls = document.querySelectorAll(".ball")
 
 for (let i = 0; i < 6; i++) {
-    randomRGB = randomize()
+    randomRGBballs = randomize()
 
-    balls[i].innerHTML = randomRGB
-    balls[i].style.backgroundColor = `rgb${randomRGB}`
+    balls[i].innerHTML = randomRGBballs
+    balls[i].style.backgroundColor = `rgb${randomRGBballs}`
 }
+
 
 let d = Math.floor(Math.random() * Math.floor(5))
 balls[d].style.backgroundColor = `rgb${randomRGB}`
 balls[d].innerHTML = randomRGB
+
+
 
 for (let i = 0; i < 6; i++) {
     balls[i].addEventListener("click", giveAnswer)
@@ -50,7 +53,7 @@ for (let i = 0; i < 6; i++) {
             cont = cont + 3
             localStorage.setItem("contador", cont)
             document.getElementById("score").innerHTML = cont
-            
+
 
         } else {
             document.getElementById("answer").innerHTML = "Errou! Tente novamente!"
