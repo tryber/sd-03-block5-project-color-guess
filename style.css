@@ -1,14 +1,26 @@
+
+
 .center {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    height: 70%px;
+    margin: 100px auto auto auto;
     text-align: center;
+    border: 1px black solid;
+    display: block;
 
 }
 
+div{
+    margin: 10px auto 10px auto;
+    font-size: 50px;
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+
 header {
-    font-size: 40px;
+    font-size: 80px;
+   
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .ball {
@@ -32,4 +44,11 @@ header {
     height: 80px;
     border: black 1px solid;
     display: block
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
