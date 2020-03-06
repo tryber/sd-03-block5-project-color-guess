@@ -1,4 +1,4 @@
-let cont = Number(localStorage.getItem(contador)) // carregar o contador ao abrir a pagina
+let cont = Number(localStorage.getItem('contador')) // carregar o contador ao abrir a pagina
 
 function randomize() {
   const a = Math.floor(Math.random() * Math.floor(256));
@@ -8,8 +8,8 @@ function randomize() {
   return randomRGB
 }
 
-// styles    
-const randomRGB = randomize();
+//styles    
+let randomRGB = randomize();
 const styleText = randomize();
 const styleboard = randomize();
 document.body.style.backgroundColor = `rgb${randomRGB}`;
@@ -30,7 +30,7 @@ const balls = document.querySelectorAll('.ball');
 for (let i = 0; i < 6; i++) {
     const randomRGBballs = randomize();
     balls[i].innerHTML = randomRGBballs;
-    balls[i].style.backgroundColor = `rgb${randomRGBballs}`
+    balls[i].style.backgroundColor = `rgb${randomRGBballs}`;
 }
 
 
