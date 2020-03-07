@@ -28,6 +28,9 @@ function LOADED() {
   const randomIndex = Math.floor(Math.random() * 6);
   const rgb = document.getElementById('rgb-color');
   rgb.innerText = balls[randomIndex].style.backgroundColor;
+
+  const resetButton = document.getElementById('reset-button');
+  resetButton.addEventListener('click', LOADED);
 }
 
 window.onload = LOADED();
