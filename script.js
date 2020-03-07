@@ -11,10 +11,12 @@ function evaluate() {
   const rightColor = document.getElementById('rgb-color').innerText;
   const kickColor = event.target.style.backgroundColor;
 
-  if (rightColor == kickColor) {
-    showResult.innerText = "Acertou!";
+  if (rightColor === kickColor) {
+    showResult.innerText = 'Acertou!';
+    const score = document.getElementById('score');
+    score.innerText = String(Number(score.innerText) + 3);
   } else {
-    showResult.innerText = "Errou! Tente novamente!";
+    showResult.innerText = 'Errou! Tente novamente!';
   }
 }
 
