@@ -7,10 +7,10 @@ function choseColor() {
 }
 
 function evaluate() {
-  const showResult = document.getElementById('anwser');
+  const showResult = document.getElementById('answer');
   const rightColor = document.getElementById('rgb-color').innerText;
   const kickColor = event.target.style.backgroundColor;
-  
+
   if (rightColor == kickColor) {
     showResult.innerText = "Acertou!";
   } else {
