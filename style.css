@@ -1,0 +1,15 @@
+h1 , p {
+  text-align: center;
+}
+
+.ball {
+  border-radius: 100px;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.balls-parent {
+  display: flex;
+  justify-content: space-between;
+}
