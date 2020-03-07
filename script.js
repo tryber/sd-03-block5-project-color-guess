@@ -10,13 +10,14 @@ function evaluate() {
   const showResult = document.getElementById('answer');
   const rightColor = document.getElementById('rgb-color').innerText;
   const kickColor = event.target.style.backgroundColor;
+  const score = document.getElementById('score');
 
   if (rightColor === kickColor) {
     showResult.innerText = 'Acertou!';
-    const score = document.getElementById('score');
     score.innerText = String(Number(score.innerText) + 3);
   } else {
     showResult.innerText = 'Errou! Tente novamente!';
+    score.innerText = String(Number(score.innerText) - 1);
   }
 }
 
@@ -31,7 +32,7 @@ function LOADED() {
   const rgb = document.getElementById('rgb-color');
   rgb.innerText = balls[randomIndex].style.backgroundColor;
 
-  const resetButton = document.getElementById('reset-button');
+  const resetButton = document.getElementById('reset-game');
   resetButton.addEventListener('click', LOADED);
 }
 
