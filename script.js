@@ -13,12 +13,12 @@ function randColor() {
 
 function acertou() {
   answer.innerHTML = 'Acertou!';
-  score.innerText = String(Number(score.innerText)+3);
+  score.innerText = Number(score.innerText)+3;
 }
 
 function errou() {
   answer.innerHTML = 'Errou! Tente novamente!';
-  score.innerText = String(Number(score.innerText)-1);  
+  score.innerText = Number(score.innerText)-1;  
 }
 
 function paint() {
