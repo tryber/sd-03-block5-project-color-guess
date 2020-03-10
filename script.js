@@ -3,7 +3,7 @@ window.onload = function() {
         const red = Math.round(Math.random() * 255);
         const green = Math.round(Math.random() * 255);
         const blue = Math.round(Math.random() * 255);
-        const color = `rgb(${red} , ${green} , ${blue})`;
+        const color = `rgb(${red}, ${green}, ${blue})`;
         return color;
     }
 
@@ -13,10 +13,10 @@ window.onload = function() {
 
 
     function gameRules() {
-        const correctAnswer = quiz.innerHTML;
+        const correctAnswer = document.getElementById('rgb-color').innerText;
         const userGuess = event.target.style.backgroundColor;
-        const answerBox = document.getElementById('answer');
-        if (userGuess == correctAnswer) {
+        let answerBox = document.getElementById('answer');
+        if (correctAnswer == userGuess) {
             answerBox.innerHTML = "Acertou!";
         } else {
             answerBox.innerHTML = "Errou! Tente novamente!";
@@ -32,10 +32,10 @@ window.onload = function() {
     }
     generateRandomColorCircles();
 
-    function placeAnswerColorCircle() {
+    function insertAnswerColorCircle() {
         let i = Math.round(Math.random() * 6);
         const ball = document.querySelectorAll('.ball');
         ball[i].style.backgroundColor = quiz.innerHTML;
     }
-    placeAnswerColorCircle();
+    insertAnswerColorCircle();
 }
