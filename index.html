@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escolha um</title>
   <link rel="stylesheet" href="style.css">
-
+  
   <script src="script.js" defer></script>
 </head>
 <body>
-
-<h1 id="title" class="title">Advinhe a cor</h1>
+  
+  <h1 id="title" class="title">Que cor é essa?</h1>
+  <h3 id="answer" class="texto"></h3>
 
 <div class="cor">
     <p class="rgb-color" id="rgb-color"></p>
 </div>
 <br>
 <div class="start">
-  <button id="start">Iniciar</button>
+  <button id="start">Reiniciar</button>
 </div>
 <br>
 <div class="meio">
@@ -29,15 +30,9 @@
   <div class="ball b6"></div>
 </div>
 
-<!-- <p align="center">
-  <img
-    class="rounded mx-auto d-block"
-    src="/guess-the-color.gif"
-    alt="Gif exibindo um jogo de adivinhar a cor"
-    width="500px"
-    height="500px"
-  >
-</p> -->
+<div class="score">
+  <h1>Pontos: </h1><h1 id="score"></h1>
+</div>
 
 </body>
 </html>
