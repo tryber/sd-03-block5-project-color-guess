@@ -27,7 +27,7 @@ function hexToRGB(h) {
 
 function generateBalls() {
   //Set balls color
-  for (var ball of balls) {
+  for (let ball of balls) {
     ball.style.backgroundColor = "rgb"+setRandomColor();
   }
   //Set text.
