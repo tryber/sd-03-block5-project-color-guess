@@ -1,7 +1,7 @@
-ball = document.getElementsByClassName('ball');
-iniciar = document.getElementById('start');
-answer = document.getElementById('answer');
-score = document.getElementById('score');
+let ball = document.getElementsByClassName('ball');
+const iniciar = document.getElementById('reset-game');
+const answer = document.getElementById('answer');
+const score = document.getElementById('score');
 iniciar.addEventListener('click', paint);
 
 function randColor() {
@@ -9,17 +9,17 @@ function randColor() {
   let b = Math.floor(Math.random() * 256);
   let c = Math.floor(Math.random() * 256);
   let color = "RGB(" + a + ", " + b + ", " + c + ")";
-  
+
   return color;
 }
 
-function paint(){
+function paint() {
   score.innerHTML = 0;
   answer.innerHTML = 'Escolha uma cor';
-  rgb = document.getElementById('rgb-color');
-  ball = document.getElementsByClassName('ball');
-  
-  for (let i=0; i<ball.length; i++){
+  const rgb = document.getElementById('rgb-color');
+  let ball = document.getElementsByClassName('ball');
+
+  for (let i=0; i<ball.length; i++) {
     ball[i].style.backgroundColor = randColor();
   }
   // for(let i in ball) {
@@ -29,7 +29,7 @@ function paint(){
   rgb.innerHTML = document.getElementsByClassName('ball')[a].style.backgroundColor;
 
   for (let i=0; i<ball.length; i++) {
-    if (ball[i].style.backgroundColor == rgb.innerHTML){
+    if (ball[i].style.backgroundColor == rgb.innerHTML) {
       ball[i].addEventListener('click', acertou);
     }else {
       ball[i].addEventListener('click', errou);
@@ -38,14 +38,14 @@ function paint(){
 }
 
 paint();
-  
-function acertou(){
+
+function acertou() {
   answer.innerHTML = 'Acertou!';
   score.innerHTML++;
   score.innerHTML++;
   score.innerHTML++;
 }
 
-function errou(){
+function errou() {
   answer.innerHTML = 'Errou! Tente novamente!';
 }
