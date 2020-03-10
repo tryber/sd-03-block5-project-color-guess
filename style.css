@@ -2,28 +2,31 @@
   font-size: 36px;
   text-align: center;
 }
+
 .textArea {
   display: flex;
   justify-content: center;
 }
+
 .textBox {
   border: 1px solid black;
   height: 50px;
   text-align: center;
   width: 100px;
 }
+
 .ballContainer {
-  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
   height: 300px;
   width: 100%;
 }
+
 .ball {
-  border: 1px solid black;
   border-radius: 100%;
+  border: 1px solid black;
   height: 200px;
-  flex-shrink: 2;
   margin: 20px;
   width: 200px;
 }
