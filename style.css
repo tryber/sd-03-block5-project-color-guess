@@ -1,10 +1,17 @@
-h1,h2{
+h1, h2 {
   text-align: center;
 }
 
-.ball{
-  background-color: black;
+.ball {
+  background-color: rgb(168, 34, 248);
   border-radius: 50%;
   width: 200px;
+  margin: 20px;
   height: 200px;
 }
+
+
+div.ball-container {
+  display: flex;
+}
+
