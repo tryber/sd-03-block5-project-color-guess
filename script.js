@@ -1,6 +1,8 @@
-const iniciar = document.getElementById('reset-game');
+const reset = document.getElementById('reset-game');
 const answer = document.getElementById('answer');
 const score = document.getElementById('score');
+// const ball = document.getElementsByClassName('ball');
+// let indice;
 
 function randColor() {
   const a = Math.floor(Math.random() * 256);
@@ -14,15 +16,15 @@ function randColor() {
 function acertou() {
   answer.innerHTML = 'Acertou!';
   score.innerText = Number(score.innerText)+3;
+  // ball[indice].style.pointerEvents = 'none';
 }
 
 function errou() {
   answer.innerHTML = 'Errou! Tente novamente!';
-  score.innerText = Number(score.innerText)-1;  
+  score.innerText = Number(score.innerText)-1;
 }
 
 function paint() {
-  score.innerHTML = 0;
   answer.innerHTML = 'Escolha uma cor';
   const rgb = document.getElementById('rgb-color');
   const ball = document.getElementsByClassName('ball');
@@ -39,11 +41,12 @@ function paint() {
   for (let i = 0; i < ball.length; i++) {
     if (ball[i].style.backgroundColor === rgb.innerHTML) {
       ball[i].addEventListener('click', acertou);
+      indice = i;
     } else {
       ball[i].addEventListener('click', errou);
     }
   }
 }
 
-iniciar.addEventListener('click', paint);
+reset.addEventListener('click', paint);
 paint();
