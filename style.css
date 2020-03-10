@@ -1,48 +1,48 @@
-body{
+body {
   background-color: darkgray;
 }
 
-.title{
+.title {
   text-align: center;
 }
 
-.texto{
+.texto {
   text-align: center;
 }
 
-.score{
+.score {
   text-align: center;
 }
 
-.cor{
-  border: 1px solid ;
+.cor {
+  border: 1px solid;
   height: 50px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   text-align: center;
   width: 120px;
 }
 
-.rgb-color{
+.rgb-color {
   font-size: small;
   text-align: center;
 }
 
-.start{
-  margin-right: auto;
+.start {
   margin-left: auto;
+  margin-right: auto;
   width: fit-content;
 }
 
-.meio{
+.meio {
   align-items: center;
-  display: flex; 
+  display: flex;
   height: 100px;
   justify-content: center;
   width: 100%;
 }
 
-.ball{
+.ball {
   border: 1px solid;
   border-radius: 50%;
   height: 80px;
