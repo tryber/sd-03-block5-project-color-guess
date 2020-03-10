@@ -1,0 +1,17 @@
+h1, h2 {
+  text-align: center;
+}
+
+.ball {
+  background-color: rgb(168, 34, 248);
+  border-radius: 50%;
+  width: 185px;
+  margin: 20px;
+  height: 185px;
+}
+
+
+div.ball-container {
+  display: flex;
+}
+
