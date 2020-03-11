@@ -1,13 +1,17 @@
-let placar;
+let placar=parseInt(localStorage.getItem('placar'));
+let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
 }
+
+
 function carregaCores(){
-    placar =0;
+    score.innerHTML = localStorage.getItem('placar');
 let ball = document.querySelectorAll('.ball');
 corAleatoria(ball);
 
 for(let i =0; i < ball.length; i++){
+    //placar=localStorage.getItem("placar");
     let corTexto = document.getElementById('rgb-color')
     corTexto.innerHTML = corAleatoria();
     
@@ -48,10 +52,11 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-             placar+=3;
+            placar+=3;
+             localStorage.setItem("placar",placar);
              console.log(placar);
              document.getElementById('answer').innerHTML = 'Acertou!'
-             
+             score.innerHTML = localStorage.getItem('placar');
          }else{
              console.log('Errou! Tente novamente!');
              document.getElementById('answer').innerHTML = 'Errou! Tente novamente!'
@@ -70,7 +75,6 @@ botaoReiniciar.addEventListener('click', function(){
     const g = Math.floor(Math.random()*256);          
     const b = Math.floor(Math.random()*256);          
     const rgb = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-    return   rgb;
-    
+    return   rgb;   
         
  } 
