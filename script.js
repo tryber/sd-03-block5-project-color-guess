@@ -1,9 +1,9 @@
-let placar;
+let placar=0;
 let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
-    placar = 0;
-    score.innerHTML = 0;
+    placar =parseInt(localStorage.getItem('placar'));
+    //score.innerHTML = localStorage.getItem('placar');
 
 }
 
@@ -56,8 +56,8 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-       
-            placar+=3;
+            placar = parseInt(localStorage.getItem('placar'));
+            placar += 3;
              localStorage.setItem('placar',placar);
              console.log(placar);
              document.getElementById('answer').innerHTML = 'Acertou!'
@@ -74,7 +74,7 @@ for(let i =0; i < ball.length; i++){
  let botaoReiniciar  = document.getElementById("reset-game");
 botaoReiniciar.addEventListener('click', function(){
     window.location.reload();
-    score.innerHTML = localStorage.getItem('placar');
+   
 })
  
  function corAleatoria() {
