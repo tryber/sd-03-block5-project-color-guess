@@ -46,7 +46,7 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-             console.log("Acertou !");
+             console.log("Acertou!");
              document.getElementById('answer').innerHTML = 'Acertou !'
              
          }else{
@@ -57,7 +57,10 @@ for(let i =0; i < ball.length; i++){
         /* console.log(event.target.style.background = 'blue'); */
         const style = window.getComputedStyle(ball[i], '');
 })}}
-
+ let botaoReiniciar  = document.getElementById("reset-game");
+botaoReiniciar.addEventListener('click', function(){
+    window.location.reload();
+})
  
  function corAleatoria() {
     const r = Math.floor(Math.random()*256);          
