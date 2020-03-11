@@ -3,7 +3,7 @@ let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
     placar =parseInt(localStorage.getItem('placar'));
-    //score.innerHTML = localStorage.getItem('placar');
+    score.innerHTML = 0;
 
 }
 
