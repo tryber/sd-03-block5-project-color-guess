@@ -3,3 +3,29 @@
 text-align: center;
 
 }
+#rgb-color{
+text-align: center;
+
+}
+
+#answer{
+text-align: center;
+
+}
+
+button{
+margin-left: 650px;
+}
+
+.ball{
+ border: 2px;
+ border-color: black;
+ border-radius: 100%;
+ background-color: blue;
+ border-style: solid;
+ width: 80px;
+ height: 80px;
+ display: inline-flex;
+ margin-left: 110px;
+ 
+}
