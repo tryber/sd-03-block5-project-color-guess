@@ -22,7 +22,7 @@ function newGame() {
   bolas[3].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[4].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[5].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
-  resposta.innerText = 'Selecione a bola cuja cor corresponda ao valor acima';
+  resposta.innerText = 'Escolha uma cor';
   puxaTexto();
 }
 
