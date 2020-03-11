@@ -1,7 +1,9 @@
 let placar=0;
 let score = document.getElementById('score');
+
 window.onload = function(){
     carregaCores();
+
     placar =parseInt(localStorage.getItem('placar'));
     score.innerHTML = 0;
 
@@ -57,6 +59,7 @@ for(let i =0; i < ball.length; i++){
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
             placar = parseInt(localStorage.getItem('placar'));
+            console.log(placar);
             placar += 3;
              localStorage.setItem('placar',placar);
              console.log(placar);
@@ -74,7 +77,8 @@ for(let i =0; i < ball.length; i++){
  let botaoReiniciar  = document.getElementById("reset-game");
 botaoReiniciar.addEventListener('click', function(){
     window.location.reload();
-   
+    placar = parseInt(localStorage.getItem('placar'));
+    score.innerHTML = parseInt(localStorage.getItem('placar'));
 })
  
  function corAleatoria() {
