@@ -1,11 +1,12 @@
 let placar=0;
 let score = document.getElementById('score');
 
+score.innerHTML = 0;
 window.onload = function(){
     carregaCores();
 
     placar =parseInt(localStorage.getItem('placar'));
-    score.innerHTML = 0;
+    score.innerHTML = parseInt(localStorage.getItem('placar'));
 
 }
 
@@ -54,18 +55,21 @@ for(let i =0; i < ball.length; i++){
     }
 
     ball[i].addEventListener('click', function(event){
-       
+         
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-            placar = parseInt(localStorage.getItem('placar'));
-            console.log(placar);
-            placar += 3;
-             localStorage.setItem('placar',placar);
-             console.log(placar);
-             document.getElementById('answer').innerHTML = 'Acertou!'
-             score.innerHTML = parseInt(localStorage.getItem('placar'));
-
+             if(localStorage.getItem('placar') == NaN){
+                 localStorage.setItem('placar', 0);
+             }else{
+                placar = parseInt(localStorage.getItem('placar'));
+                console.log(placar);
+                placar += 3;
+                 localStorage.setItem('placar',placar);
+                 console.log(placar);
+                 document.getElementById('answer').innerHTML = 'Acertou!'
+                 score.innerHTML = parseInt(localStorage.getItem('placar'));    
+             }            
          }else{
              console.log('Errou! Tente novamente!');
              document.getElementById('answer').innerHTML = 'Errou! Tente novamente!'
