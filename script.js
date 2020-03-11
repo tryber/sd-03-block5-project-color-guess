@@ -51,7 +51,7 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-             console.log("Acertou !");
+             console.log("Acertou!");
              document.getElementById('answer').innerHTML = 'Acertou !'
              
          }else{
