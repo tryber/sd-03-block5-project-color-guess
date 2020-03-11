@@ -4,10 +4,14 @@ let score = document.getElementById('score');
 score.innerHTML = 0;
 window.onload = function(){
     carregaCores();
-
+     if(isNaN(localStorage.getItem('placar')) ||  localStorage.getItem('placar') ==  null){
+      localStorage.setItem('placar', 0);
+      placar =parseInt(localStorage.getItem('placar'));
+    score.innerHTML = parseInt(localStorage.getItem('placar'));
+     }else{
     placar =parseInt(localStorage.getItem('placar'));
     score.innerHTML = parseInt(localStorage.getItem('placar'));
-
+     }
 }
 
 
@@ -59,7 +63,8 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-             if(localStorage.getItem('placar') == NaN){
+             console.log(localStorage.getItem('placar'));
+                          if(isNaN(localStorage.getItem('placar')) ){
                  localStorage.setItem('placar', 0);
              }else{
                 placar = parseInt(localStorage.getItem('placar'));
