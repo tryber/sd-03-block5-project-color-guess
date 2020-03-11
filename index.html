@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the RGB v0.6</title>
+    <title>Guess the RGB v0.8</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="newGame()">
     <header>
         <h1 id="title" class="titulo">Adivinhe a côr!!</h1>
-        <button id="reset-game" onclick="newGame()">New Game</button>
+        <button id="reset-button" onclick="newGame()">Nova partida</button>
         <div id="score" class="placar">Placar: 0</div>
     </header>
-    <article>
+    <section>
         <div class="textos"><h2 id="rgb-color">Clique em New Game para iniciar um novo jogo</h2></div>
         <div class="textos"><h3 id="answer">Escolha uma cor</h3></div>
         <div class="div-bolas">
@@ -23,7 +23,7 @@
             <div class="ball" onclick="comparaResposta()"></div>
             <div class="ball" onclick="comparaResposta()"></div>
         </div>
-    </article>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

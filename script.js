@@ -10,7 +10,7 @@ function geraRGB() {
 
 function puxaTexto() {
   //  Sorteia um número entre 0 e 6
-  let indice = Math.floor(Math.random() * 6);
+  const indice = Math.floor(Math.random() * 6);
   divRGB.textContent = bolas[indice].style.backgroundColor;
 }
 
@@ -34,8 +34,7 @@ function comparaResposta() {
     resposta.style.backgroundColor = 'green';
     placar += 3;
     textoPlacar.innerText = `Placar: ${placar}`;
-  }
-  else {
+  } else {
     resposta.innerText = 'Errou! Tente novamente!';
     resposta.style.backgroundColor = 'red';
   }
