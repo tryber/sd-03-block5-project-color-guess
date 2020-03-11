@@ -3,6 +3,8 @@ let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
     placar = 0;
+score.innerHTML = 0;
+
 }
 
 
