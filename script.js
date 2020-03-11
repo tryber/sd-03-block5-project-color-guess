@@ -5,6 +5,7 @@ const textoPlacar = document.getElementById('score');
 let placar = 0;
 
 function geraRGB() {
+  //  Retorna um valor hexadecimal de 2 dígitos em formato decimal
   return (Math.floor(Math.random() * 256));
 }
 
@@ -15,15 +16,13 @@ function puxaTexto() {
 }
 
 function newGame() {
-  //  for (let i in bolas)
-  //    bolas[i].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[0].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[1].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[2].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[3].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[4].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
   bolas[5].style.backgroundColor = `rgb(${geraRGB()},${geraRGB()},${geraRGB()})`;
-  resposta.innerText = '';
+  resposta.innerText = 'Selecione a bola cuja cor corresponda ao valor acima';
   puxaTexto();
 }
 
