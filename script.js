@@ -1,7 +1,9 @@
+let placar;
 window.onload = function(){
     carregaCores();
 }
 function carregaCores(){
+    placar =0;
 let ball = document.querySelectorAll('.ball');
 corAleatoria(ball);
 
@@ -46,8 +48,9 @@ for(let i =0; i < ball.length; i++){
         // ball[i].style.backgroundColor = corAleatoria();
          console.log(ball[i].style.backgroundColor);
          if(ball[i].style.backgroundColor == corTexto.innerText){
-             console.log("Acertou!");
-             document.getElementById('answer').innerHTML = 'Acertou !'
+             placar+=3;
+             console.log(placar);
+             document.getElementById('answer').innerHTML = 'Acertou!'
              
          }else{
              console.log('Errou! Tente novamente!');
