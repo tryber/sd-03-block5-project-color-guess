@@ -3,7 +3,7 @@ let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
     placar = 0;
-    score.innerHTML = 0;
+    score.innerHTML = localStorage.getItem('placar');
 
 }
 
@@ -74,6 +74,7 @@ for(let i =0; i < ball.length; i++){
  let botaoReiniciar  = document.getElementById("reset-game");
 botaoReiniciar.addEventListener('click', function(){
     window.location.reload();
+    score.innerHTML = localStorage.getItem('placar');
 })
  
  function corAleatoria() {
