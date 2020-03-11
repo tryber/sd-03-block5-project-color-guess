@@ -57,12 +57,14 @@ for(let i =0; i < ball.length; i++){
              console.log(placar);
              document.getElementById('answer').innerHTML = 'Acertou!'
              score.innerHTML = localStorage.getItem('placar');
-             
+
          }else{
+            placar-=1;
              console.log('Errou! Tente novamente!');
              document.getElementById('answer').innerHTML = 'Errou! Tente novamente!'
-
-         }
+             localStorage.setItem("placar",placar);
+             score.innerHTML = localStorage.getItem('placar');
+           }
         /* console.log(event.target.style.background = 'blue'); */
         const style = window.getComputedStyle(ball[i], '');
 })}}
