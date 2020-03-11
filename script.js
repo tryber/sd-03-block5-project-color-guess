@@ -2,6 +2,7 @@ let placar;
 let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
+    placar = 0;
     score.innerHTML = 0;
 
 }
@@ -57,7 +58,7 @@ for(let i =0; i < ball.length; i++){
          if(ball[i].style.backgroundColor == corTexto.innerText){
        
             placar+=3;
-            window.localStorage.setItem('placar',placar);
+             localStorage.setItem('placar',placar);
              console.log(placar);
              document.getElementById('answer').innerHTML = 'Acertou!'
              score.innerHTML = parseInt(localStorage.getItem('placar'));
