@@ -8,13 +8,11 @@ window.onload = function() {
             return color;
         }
 
-
         const quiz = document.getElementById('rgb-color');
         quiz.innerHTML = randomColor();
 
-
         function gameRules() {
-            const correctAnswer = document.getElementById('rgb-color').innerText;
+            const correctAnswer = quiz.innerHTML;
             const userGuess = event.target.style.backgroundColor;
             const answerBox = document.getElementById('answer');
             if (correctAnswer == userGuess) {
@@ -41,14 +39,12 @@ window.onload = function() {
         insertAnswerColorCircle();
 
         function resetGame() {
-            const resetButton = document.getElementById('reset');
+            const resetButton = document.getElementById('reset-game');
             const answerBox = document.getElementById('answer');
             resetButton.addEventListener('click', startGame);
-            answerBox.innerHTML = "";
-
+            answerBox.innerHTML = "Escolha uma cor";
         }
         resetGame();
     }
     startGame();
-
 }
