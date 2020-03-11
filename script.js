@@ -1,5 +1,7 @@
 const answer = document.getElementById('answer');
 const score = document.getElementById('score');
+score.innerText = 0;
+let tries = 0;
 
 function randomColor() {
   const a = Math.floor(Math.random() * 256);
@@ -7,11 +9,6 @@ function randomColor() {
   const c = Math.floor(Math.random() * 256);
   const color = `rgb(${a}, ${b}, ${c})`;
   return color;
-}
-
-function correct() {
-  answer.innerHTML = 'Acertou!';
-  score.innerText = Number(score.innerText) + 3;
 }
 
 function wrong() {
@@ -31,11 +28,18 @@ function startGame() {
   rgbColor.innerHTML = balls[randomAnswer].style.backgroundColor;
 
   for (let i = 0; i < balls.length; i += 1) {
-    if (balls[i].style.backgroundColor === rgbColor.innerHTML) {
-      balls[i].addEventListener('click', correct);
-    } else {
-      balls[i].addEventListener('click', wrong);
-    }
+    balls[i].addEventListener('click', function result() {
+      if (balls[i].style.backgroundColor === rgbColor.innerHTML) {
+        answer.innerHTML = 'Acertou!';
+        if (tries == 0) {
+          score.innerText = Number(score.innerText) + 3;
+        }
+        acertou = 1;
+      } else {
+        answer.innerHTML = 'Errou! Tente novamente!';
+        score.innerText = Number(score.innerText) - 3;
+      }
+    });
   }
 }
 startGame();
