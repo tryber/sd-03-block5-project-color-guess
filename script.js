@@ -7,6 +7,7 @@ window.onload = function() {
             const color = `rgb(${red}, ${green}, ${blue})`;
             return color;
         }
+        //comentário para mudar push
 
         const quiz = document.getElementById('rgb-color');
         quiz.innerHTML = randomColor();
