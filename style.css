@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'gilbert-color-bold-preview5';
+    font-size: 42px;
+}
+
+.ball-container {
+    display: flex;
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin: 15px 10px;
+    cursor: pointer;
+}
