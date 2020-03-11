@@ -11,7 +11,7 @@ let ball = document.querySelectorAll('.ball');
 corAleatoria(ball);
 
 for(let i =0; i < ball.length; i++){
-    //placar=localStorage.getItem("placar");
+    
     let corTexto = document.getElementById('rgb-color')
     corTexto.innerHTML = corAleatoria();
     
@@ -57,6 +57,7 @@ for(let i =0; i < ball.length; i++){
              console.log(placar);
              document.getElementById('answer').innerHTML = 'Acertou!'
              score.innerHTML = localStorage.getItem('placar');
+             
          }else{
              console.log('Errou! Tente novamente!');
              document.getElementById('answer').innerHTML = 'Errou! Tente novamente!'
