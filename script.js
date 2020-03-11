@@ -1,4 +1,4 @@
-window.onload = function() {
+
   let textColor = document.getElementsByClassName("rgb-adivinhe")[0];
 
   function getRandomRgb() {
@@ -59,4 +59,3 @@ window.onload = function() {
     correctBall = (document.getElementsByClassName("ball")[getRandomInt(0, 6)].style.backgroundColor = "rgb" + textColor.innerHTML)
     color();
   });
-};
