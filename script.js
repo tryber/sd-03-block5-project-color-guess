@@ -1,7 +1,8 @@
-let placar = 0;
+let placar;
 let score = document.getElementById('score');
 window.onload = function(){
     carregaCores();
+    placar = 0;
 }
 
 
