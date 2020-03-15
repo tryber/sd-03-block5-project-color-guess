@@ -9,7 +9,7 @@ const scoreSalvo = localStorage.getItem('Score');
 let score = 0;
 
 if (scoreSalvo) {
-  score = parseFloatgit(scoreSalvo);
+  score = parseFloat(scoreSalvo);
 }
 
 function corAleatoria() {
