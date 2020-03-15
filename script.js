@@ -2,14 +2,14 @@ const balls = document.querySelectorAll('.ball');
 const arrayCores = ['', '', '', '', '', ''];
 const answer = document.querySelector('#answer');
 const rgbColor = document.querySelector('#rgb-color');
-const botao1 = document.querySelector('#botao1');
-const botao2 = document.querySelector('#botao2');
+const resetGame = document.querySelector('#reset-game');
+const resetScore = document.querySelector('#reset-score');
 const placar = document.querySelector('#score');
 const scoreSalvo = localStorage.getItem('Score');
 let score = 0;
 
 if (scoreSalvo) {
-  score = parseInt(scoreSalvo);
+  score = parseFloatgit(scoreSalvo);
 }
 
 function corAleatoria() {
@@ -33,7 +33,7 @@ window.onload = function () {
 };
 
 function adivinhaCor(i) {
-  balls[i].addEventListener('click', function() {
+  balls[i].addEventListener('click', function () {
     if (balls[i].style.backgroundColor === rgbColor.innerHTML) {
       answer.innerHTML = 'Acertou!';
       score += 3;
@@ -54,8 +54,8 @@ function limpaPlacar() {
   placar.innerHTML = 0;
 }
 
-botao1.addEventListener('click', function() {
+resetGame.addEventListener('click', function () {
   window.location.reload();
 });
 
-botao2.addEventListener('click', limpaPlacar);
+resetScore.addEventListener('click', limpaPlacar);
