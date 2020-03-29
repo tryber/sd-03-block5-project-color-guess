@@ -2,7 +2,7 @@
 
 const parRgb = document.getElementById('rgb-color');
 const resposta = document.getElementById('answer');
-// const containerBall = document.querySelector('.containerBall')
+const containerBall = document.querySelectorAll('.containerBall')
 
 // Funções
 
@@ -11,9 +11,12 @@ const gerarCorAl = () => {
   return cor;
 };
 
+
+
 const init = () => {
   parRgb.innerHTML = gerarCorAl();
   resposta.innerHTML = 'Escolha uma cor';
 };
 
-window.onload(init());
+init();
+console.log(containerBall);
