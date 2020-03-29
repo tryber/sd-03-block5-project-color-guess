@@ -1,0 +1,33 @@
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+}
+
+h1 , p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.paragrafo {
+  font-size: 1.5em;
+}
+
+.containerBall {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.ball {
+  border: 1.5px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
