@@ -1,12 +1,12 @@
 .main {
-  width: 80%;
-  margin: auto;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: auto;
+  width: 80%;
 }
 
-h1,p {
+h1 , p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
 }
@@ -15,6 +15,19 @@ h1,p {
   font-size: 2em;
 }
 
-.paragrafo{
+.paragrafo {
   font-size: 1.5em;
+}
+
+.containerBall {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.ball {
+  border: 1.5px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
