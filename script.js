@@ -3,7 +3,7 @@
 const parRgb = document.getElementById('rgb-color');
 const resposta = document.getElementById('answer');
 const divsBall = document.querySelectorAll('.ball');
-const botao = document.getElementById('botao');
+const botao = document.getElementById('reset-game');
 const score = document.getElementById('score');
 let pontos = 0;
 
