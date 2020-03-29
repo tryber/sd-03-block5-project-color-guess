@@ -4,6 +4,8 @@ const parRgb = document.getElementById('rgb-color');
 const resposta = document.getElementById('answer');
 const divsBall = document.querySelectorAll('.ball');
 const botao = document.getElementById('botao');
+const score = document.getElementById('score');
+let pontos = 0;
 
 // Funções
 
@@ -14,6 +16,8 @@ const checarResposta = (divs) => {
       const correto = parRgb.innerText;
       if (teste === correto) {
         resposta.innerHTML = 'Acertou!';
+        pontos += 3;
+        score.innerHTML = pontos;
       } else {
         resposta.innerHTML = 'Errou! Tente novamente!';
       }
@@ -57,3 +61,4 @@ botao.addEventListener('click', init);
 // Load
 
 init();
+score.innerHTML = pontos;
